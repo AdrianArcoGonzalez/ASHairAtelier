@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-20 px-4 bg-[radial-gradient(circle_at_top,_#49332f_0%,_#2b1d1a_38%,_#1d1413_100%)] text-[#f6efe9]">
+    <section className="pt-32 pb-20 px-4 bg-[#302217] text-[#f6efe9]">
       <div className="max-w-7xl mx-auto text-center">
         <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d9ba8b]">
           La belleza de sentirte tú

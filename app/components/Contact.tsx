@@ -2,10 +2,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="py-20 px-4 bg-[radial-gradient(circle_at_top,_#49332f_0%,_#2b1d1a_38%,_#1d1413_100%)]"
-    >
+    <section id="contact" className="py-20 px-4 bg-[#302217]">
       <div className="max-w-4xl mx-auto">
         <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-[#d9ba8b]">
           Contacto
@@ -113,7 +110,7 @@ const Contact = () => {
                 rows={5}
                 className="w-full px-4 py-3 border border-[#d6c3af] bg-[#fffdfb] rounded-xl text-[#2b1d1a] placeholder:text-[#82685f] focus:outline-none focus:border-[#c7a77a]"
               ></textarea>
-              <button className="w-full bg-[#2b1d1a] text-[#f5eadf] py-3 rounded-xl font-semibold transition hover:bg-[#3a2a27]">
+              <button className="w-full bg-[#302217] text-[#f5eadf] py-3 rounded-xl font-semibold transition hover:bg-[#3b2a22]">
                 Enviar Mensaje
               </button>
             </form>

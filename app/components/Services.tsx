@@ -13,7 +13,7 @@ const Services = () => {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="rounded-3xl border border-[#d9ba8b]/60 bg-[radial-gradient(circle_at_top,_#49332f_0%,_#2b1d1a_38%,_#1d1413_100%)] p-8 shadow-[0_14px_40px_rgba(43,29,26,0.22)] transition hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(43,29,26,0.28)] text-center"
+              className="rounded-3xl border border-[#d9ba8b]/60 bg-[#302217] p-8 shadow-[0_14px_40px_rgba(43,29,26,0.22)] transition hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(43,29,26,0.28)] text-center"
             >
               <div className="mb-4 mx-auto flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-[#f0e2d1]">
                 <Image

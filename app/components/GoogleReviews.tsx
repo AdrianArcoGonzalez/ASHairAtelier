@@ -84,7 +84,7 @@ export default function GoogleReviews({ reviewsData }: GoogleReviewsProps) {
               href={reviewsData.googleMapsUri}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full bg-[#2b1d1a] px-5 py-3 font-medium text-[#f5eadf] transition hover:bg-[#3a2a27]"
+              className="mt-6 inline-block rounded-full bg-[#302217] px-5 py-3 font-medium text-[#f5eadf] transition hover:bg-[#3b2a22]"
             >
               Ver todas las reseñas en Google
             </a>

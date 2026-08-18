@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 z-50 w-full border-b border-[#d8c4ad]/40 bg-[#2b1d1a]/95 text-[#f6efe9] shadow-[0_10px_30px_rgba(43,29,26,0.18)] backdrop-blur-md"
+      className="fixed top-0 z-50 w-full border-b border-[#d8c4ad]/40 bg-[#302217]/95 text-[#f6efe9] shadow-[0_10px_30px_rgba(43,29,26,0.18)] backdrop-blur-md"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="border-t border-[#d8c4ad]/20 bg-[#2b1d1a] md:hidden">
+        <div className="border-t border-[#d8c4ad]/20 bg-[#302217] md:hidden">
           <div className="flex flex-col gap-4 px-4 py-4 text-sm uppercase tracking-[0.15em] text-[#f6efe9]">
             <a
               href="#services"
