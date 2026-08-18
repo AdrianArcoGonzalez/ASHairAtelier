@@ -70,6 +70,7 @@ export default function Slider({
         <div
           className="flex items-stretch transition-transform duration-500 ease-out will-change-transform"
           style={{
+            width: "100%",
             transform: `translateX(-${offset}%)`,
             transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
           }}
