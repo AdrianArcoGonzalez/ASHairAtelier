@@ -2,7 +2,6 @@ import { Review } from "@/app/Interfaces/Interfaces";
 import Image from "next/image";
 
 const ReviewCard = ({ review }: { review: Review }) => {
-  console.log("review", review);
   return (
     <article
       key={`${review.name}-${review.rating}`}
