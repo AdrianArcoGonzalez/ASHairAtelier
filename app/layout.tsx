@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Estilo & Elegancia - Peluquería Premium",
+  title: "Hair Atelier | Peluquería Premium",
   description: "Peluquería de alta calidad con profesionales certificados. Ofrecemos cortes, tinturas, tratamientos y más.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
