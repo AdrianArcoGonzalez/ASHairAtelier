@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hair Atelier | Peluquería Premium",
-  description: "Peluquería de alta calidad con profesionales certificados. Ofrecemos cortes, tinturas, tratamientos y más.",
+  title: "AS Hair Atelier",
+  description:
+    "Descubre AS Hair Atelier, un espacio exclusivo en Granollers dedicado al arte del cabello, la belleza y el cuidado personalizado.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
