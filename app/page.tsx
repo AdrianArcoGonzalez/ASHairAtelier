@@ -1,36 +1,31 @@
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import GoogleReviews from "./components/GoogleReviews";
+import { getGalleryPhotos } from "./api/googlePhotos/data";
+import { getGoogleReviews } from "./api/googleReviews/data";
 
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import Services from './components/Services';
-import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-
-export default function Home() {
+export default async function Home() {
+  const galleryPhotos = await getGalleryPhotos();
+  const reviewsData = await getGoogleReviews();
   return (
     <div className="min-h-screen bg-[#f7f1ea] text-[#2b1d1a]">
-      {/* Navigation */}
-      <Header/>
-      {/* Hero Section */}
-      
-      <HeroSection/>
+      <Header />
 
-      {/* Services Section */}
-      
-      <Services/>
+      <HeroSection />
 
-      {/* Gallery Section */}
-      <Gallery/>
+      <Services />
 
-      {/* Testimonials Section */}
-      
-      <Testimonials/>
+      <Gallery photos={galleryPhotos} />
 
-      {/* Contact Section */}
-      <Contact/>
-      {/* Footer */}
-      <Footer/>
+      <GoogleReviews reviewsData={reviewsData!} />
+
+      <Contact />
+
+      <Footer />
     </div>
   );
 }
