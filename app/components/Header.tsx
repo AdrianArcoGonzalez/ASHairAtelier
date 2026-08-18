@@ -27,13 +27,13 @@ const Header = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d5b88e] bg-[#f3eadf] text-lg font-bold text-[#2b1d1a]">
+          <div className="flex h-14 w-14 items-center justify-center overflow-hidden bg-transparent">
             <Image
               src="/images/logo.webp"
               alt="Logo"
-              width={24}
-              height={24}
-              className="h-6 w-6"
+              width={56}
+              height={56}
+              className="h-14 w-14 object-contain"
             />
           </div>
           <div>

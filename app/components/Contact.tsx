@@ -4,13 +4,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 px-4 bg-[linear-gradient(135deg,#f4e9df_0%,#eedfcf_100%)]"
+      className="py-20 px-4 bg-[radial-gradient(circle_at_top,_#49332f_0%,_#2b1d1a_38%,_#1d1413_100%)]"
     >
       <div className="max-w-4xl mx-auto">
-        <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-[#7a5f4f]">
+        <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-[#d9ba8b]">
           Contacto
         </p>
-        <h2 className="text-4xl font-bold text-center mb-16 text-[#2b1d1a]"></h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-[#f6efe9]"></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <div className="space-y-4">

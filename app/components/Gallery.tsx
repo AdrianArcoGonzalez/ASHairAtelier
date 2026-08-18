@@ -43,12 +43,15 @@ export default function Gallery({ photos }: GalleryProps) {
   };
 
   return (
-    <section id="gallery" className="bg-[#efe2d5] px-4 py-20">
+    <section
+      id="gallery"
+      className="bg-[radial-gradient(circle_at_top,_#49332f_0%,_#2b1d1a_38%,_#1d1413_100%)] px-4 py-20"
+    >
       <div className="mx-auto max-w-7xl">
-        <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-[#734f42]">
+        <p className="mb-3 text-center text-sm uppercase tracking-[0.35em] text-[#d9ba8b]">
           Galería
         </p>
-        <h2 className="mb-16 text-center text-4xl font-bold text-[#2b1d1a]"></h2>
+        <h2 className="mb-16 text-center text-4xl font-bold text-[#f6efe9]"></h2>
 
         <Slider
           currentIndex={currentIndex}
