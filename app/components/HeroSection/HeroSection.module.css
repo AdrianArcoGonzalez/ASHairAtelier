@@ -1,0 +1,107 @@
+.heroSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 82vh;
+  background: #2d1b14;
+  padding: 7rem 1rem 5rem;
+  color: #f9f5f2;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(69, 48, 42, 0.38) 0%,
+    rgba(69, 48, 42, 0.42) 38%,
+    rgba(69, 48, 42, 0.48) 100%
+  );
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/fondohero.webp");
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.38) brightness(0.9) contrast(1.02);
+  mix-blend-mode: multiply;
+  opacity: 0.92;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 58rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroEyebrow {
+  margin-bottom: 1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #d9ba8b;
+}
+
+.heroTitle {
+  max-width: 48rem;
+  margin: 0 auto;
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  font-family: var(--font-headline), Georgia, serif;
+}
+
+.heroText {
+  max-width: 46rem;
+  margin: 1.5rem auto 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(249, 245, 242, 0.9);
+  font-family: var(--font-headline), Georgia, serif;
+}
+
+.heroButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  min-width: 9.5rem;
+  border-radius: 0.8rem;
+  background: #d7b782;
+  padding: 0.9rem 1.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2d1b14;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+  font-family: var(--font-headline), Georgia, serif;
+}
+
+.heroButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    min-height: 88vh;
+    padding-top: 8rem;
+  }
+
+  .heroEyebrow {
+    font-size: 0.75rem;
+  }
+}

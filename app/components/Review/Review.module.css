@@ -1,0 +1,42 @@
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(45, 27, 20, 0.05);
+  box-shadow: 0 4px 15px rgba(45, 27, 20, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.reviewCard:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  font-size: 14px;
+  line-height: 1;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a372e;
+  font-style: italic;
+  font-family: var(--font-body), Georgia, serif;
+  margin-bottom: 24px;
+}
+
+.author {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2d1b14;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-body), sans-serif;
+}

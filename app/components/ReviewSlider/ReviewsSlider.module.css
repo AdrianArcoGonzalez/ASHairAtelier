@@ -1,0 +1,29 @@
+.mobileList,
+.desktopList {
+  width: 100%;
+}
+
+.mobileList {
+  display: flex;
+}
+
+.mobileSlide,
+.desktopCard {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.desktopList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.625rem;
+}
+
+.slideCard {
+  height: 100%;
+  border: 1px solid #eadcc9;
+  border-radius: 1rem;
+  background: #fffaf7;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}

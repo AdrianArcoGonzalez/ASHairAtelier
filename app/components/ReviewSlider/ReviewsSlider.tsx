@@ -1,8 +1,9 @@
 "use client";
 
-import { Review } from "../Interfaces/Interfaces";
-import ReviewCard from "./Review/Review";
-import Slider from "./Slider/Slider";
+import { Review } from "@/app/Interfaces/Interfaces";
+import Slider from "../Slider/Slider";
+import ReviewCard from "../Review/Review";
+import styles from "./ReviewsSlider.module.css";
 
 interface ReviewsSliderProps {
   reviews: Review[];
@@ -33,23 +34,20 @@ export default function ReviewsSlider({
       onNext={onNext}
     >
       {isMobile ? (
-        <div className="flex w-full">
+        <div className={styles.mobileList}>
           {reviews.map((review, idx) => (
-            <div
-              key={`${review.name}-${idx}`}
-              className="w-full flex-shrink-0 px-0"
-            >
-              <div className="h-full rounded-2xl border border-[#eadcc9] bg-[#fffaf7] p-4 shadow-sm">
+            <div key={`${review.name}-${idx}`} className={styles.mobileSlide}>
+              <div className={styles.slideCard}>
                 <ReviewCard review={review} />
               </div>
             </div>
           ))}
         </div>
       ) : (
-        <div className="grid w-full grid-cols-3 gap-[10px]">
+        <div className={styles.desktopList}>
           {reviews.map((review, idx) => (
-            <div key={`${review.name}-${idx}`} className="h-full">
-              <div className="h-full rounded-2xl border border-[#eadcc9] bg-[#fffaf7] p-4 shadow-sm">
+            <div key={`${review.name}-${idx}`} className={styles.desktopCard}>
+              <div className={styles.slideCard}>
                 <ReviewCard review={review} />
               </div>
             </div>
