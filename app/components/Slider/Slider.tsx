@@ -28,6 +28,7 @@ export default function Slider({
   onNext,
 }: SliderProps) {
   const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
   const [slideOffset, setSlideOffset] = useState(0);
 
   const offset = currentIndex * 100;
@@ -40,13 +41,27 @@ export default function Slider({
   const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
     if (!isMobile) return;
     touchStartX.current = event.touches[0].clientX;
+    touchStartY.current = event.touches[0].clientY;
   };
 
   const handleTouchMove = (event: TouchEvent<HTMLDivElement>) => {
-    if (!isMobile || touchStartX.current === null) return;
+    if (
+      !isMobile ||
+      touchStartX.current === null ||
+      touchStartY.current === null
+    ) {
+      return;
+    }
 
     const deltaX = event.touches[0].clientX - touchStartX.current;
-    setSlideOffset(deltaX);
+    const deltaY = event.touches[0].clientY - touchStartY.current;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      setSlideOffset(deltaX);
+      return;
+    }
+
+    setSlideOffset(0);
   };
 
   const handleTouchEnd = () => {
@@ -54,6 +69,7 @@ export default function Slider({
 
     const deltaX = slideOffset;
     touchStartX.current = null;
+    touchStartY.current = null;
 
     if (deltaX < -60 && hasNext) {
       onNext();
@@ -71,8 +87,9 @@ export default function Slider({
           className="flex items-stretch transition-transform duration-500 ease-out will-change-transform"
           style={{
             width: "100%",
-            transform: `translateX(-${offset}%)`,
+            transform: `translateX(calc(-${offset}% + ${slideOffset}px))`,
             transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+            touchAction: "pan-y",
           }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
