@@ -101,7 +101,7 @@
   display: inline-flex;
   border: none;
   background: transparent;
-  color: var(--neutral);
+  color: var(--primary);
   cursor: pointer;
 }
 
@@ -120,9 +120,11 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--neutral);
+  font-family: var(--font-headline), Georgia, serif;
 }
 
 .mobileMenuLink {
+  font-family: var(--font-headline), Georgia, serif;
   transition: color 0.2s ease;
 }
 

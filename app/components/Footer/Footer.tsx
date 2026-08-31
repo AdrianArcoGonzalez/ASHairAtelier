@@ -14,7 +14,7 @@ const Footer = () => {
 
         <div className={styles.bottomBar}>
           <div className={styles.copyright}>
-            © 2024 AS Hair Atelier. All rights reserved.
+            © 2026 AS Hair Atelier. All rights reserved.
           </div>
 
           <div className={styles.legalLinks}>
